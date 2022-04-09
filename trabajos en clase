@@ -1,0 +1,103 @@
+#determinar el mayor y menor
+print(" ingresar el primer numero")
+n1=int(input("numero 1:"))
+print("ingresa el segundo numero")
+n2=int(input("numero 2:"))
+if n1>n2:
+    print(f" el numero{n1} mayor que el {n2}")
+else:
+    print(f" el numero{n2} mayor que el {n1}")
+    
+    
+    
+   # escribir tres notas y determinar si aprobo o no
+
+not1= float(input("ingresar la primera nota:"))
+not2= float(input("ingresar la segunda nota:"))
+not3= float(input("ingresar la tercera nota:"))
+
+prom=(not1+not2+not3)/3
+if(prom>=3):
+    print(f"la nota es{prom} si aprobo")
+
+elif(prom<3):
+    print(f"la nota es{prom} no aprobo")
+    
+    
+    
+    #fibonacci
+
+from ast import Return
+
+
+def fib_r(n):
+    if n < 2:
+        return n
+    return fib_r(n-1) + fib_r (n-2)
+for x in range(10):
+    print(fib_r(x))
+
+
+
+#determinar si par, impar o primo
+
+n1 =int(input("ingresar el numero: "))
+
+if n1%2==0:
+    print(f"{n1} es par")
+else:
+    print(f"{n1} es impar")
+
+if n1 > 1:
+    cont=0
+    for i in range(2,n1):
+        resto=n1%i
+        #print("{} % {} = {}".format(N1,i,resto))
+        if resto==0:
+            cont+=1
+    if cont==0:
+        print("El numero {} es un numero primo".format(n1))
+    
+    
+    
+    #factorial de un numero
+
+n = int(input("Ingrese un numero:"))
+def factorial(n):
+    if (n==0):
+        return 1 
+    
+    else:
+        return n * factorial(n-1)
+print("El factorial de " + str(n) + " es: " + str(factorial(n)))
+
+
+
+# valor del tikete segun las edades de las personas
+
+edad = float (input("digite la edad del pasajero:"))
+precio_tikete= 300.000
+descuento= 150.000
+
+
+if edad<=5:
+    print(f"valor a pagar:${0}")
+
+elif edad==18:
+    print (f"el precio a pagar es ${descuento}")
+
+else:
+    print(f"paga el valor ${precio_tikete}")
+    
+    
+    #la aerolinea le cobra $100.000 a sus pasajeres si llevan un peso de kilos mayor a 10
+
+peso= float(input("cantidad de kilos:"))
+peso_normal= 0.0
+sobre_peso= 100.000
+if peso<=10:
+    print(f"valor a paga: ${peso_normal}")
+
+elif peso>10:
+    print(f"valor a pagar: ${sobre_peso:.3f}")
+    
